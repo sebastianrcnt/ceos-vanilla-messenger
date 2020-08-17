@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Messenger</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="container flex-col">
+      <div class="top-bar flex-row">
+        <div class="profile flex-row" onclick="handleUserToggle()">
+          <img class="profile-image" id="current-user-profile-image" alt="" />
+          <div class="profile-info flex-col">
+            <div class="user-name" id="current-user-indicator"></div>
+            <div class="user-activity">현재 활동 중</div>
+          </div>
+        </div>
+      </div>
+      <div class="messages flex-col" id="messages"></div>
+      <form class="message-input flex-row">
+        <input
+          type="text"
+          id="message"
+          placeholder="메세지를 입력하세요..."
+          autocomplete="off"
+        />
+        <img
+          id="send"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEX///8zMzMlJSX39/eXl5f19fUiIiKVlZUmJiYbGxv5+fmZmZkwMDAaGhotLS0pKSkVFRWkpKTQ0NC4uLjh4eERERFYWFg+Pj7s7OzW1taIiIjIyMhycnJmZmbKysqrq6tJSUmJiYlNTU18fHxpaWm1tbUAAABziXRYAAAEHElEQVR4nO2di3qiMBCFG6rITaQVvFRbba37/o+4oLsrVcPFAEnOnv8JON+QyUwmmXl6IoQQQgghhBBCCCGEEEIIIYQQQohVbMa6v6BvjlkY6P6GfkkTxw+fdX9Fr0SRcBxoOy5iIYTjAmsceUKcNaL+qxtXnIH9V1eZ+Auqz4kjcdEIacdtLEo4GZ4dXxzxAzw7vvriCrT1OHavFcLZcR/dSsz3xxGOxsPsjkKoGOB45zfF+lfXU4lCHJ9z40zh7LiIKyRCxACf910NkB3nMlcDsx5Tuasp29FmjfG9Pf9Go80xwHulqylptNaOoddIocU+56NqR7zSaKfPGWf10iy347KJq7lozELragGHZq7GYjvuavf8G42Wrcd1c1dTsuPIIo3BAwotiwHunmQ00miLHd9q0gv77VifXsg1+lbsHWnysEJb9o5G6YVcowUxQMP0wmI7jpqmF3KNhscAm8ddTcmOJu8dqzbphVyjyXuHU//9DTWaasetoqspazTTjteFUhWN/sjEveO2UKqi0UQ73iuUqmg0MAZ4ML2QazRu75AUSlU0Ts1aj9JCqYpGo+xYUShV0ehOzNGokkBVajTGjtWFUgSNk85dzUWjGTGAwklGA40mxACrXlzNRaMBMYDoeM+/0ah9PaqeZDTQqDkGCLtLL+Qate6PLQqllmpsVShV06jrX21XKFXTqMeO3acXco16fE77QqmKRh0xQD/phRQvG9yOz0PasGD4GKDrk4wGGgdejw8XSlU0DupXe00vjNCoVChV0zjUv5pkydT3XcebxXEUDbgqB7TjKl1v5i/h53bxtYzcXK/7R2/vGnXEAMF4lb7meidv28XSzbKS3j4E53bUfA5Q6J3vXiaH78VeeEmS/86uN5t1KFdDDCAnGKfrj80u/Dy8fwnX9afTk15V8xp1vlomOC3fXfi2fV8sZ0nZXbXWONWWWzUnKJbv8bx8o9hz3VkrR6Uxf3yIIF+8k+99GzNGya+17s+uBtGGHa5Dz5R1COlLAfdDzJhGW1w60PqDzy3w80P8HL/uvazt+v6DszYN56UD7+/4Z974dQv82hN8/RC/Boxfx8e/i4F/nwb+TlTP99oMOM/Gv5uIf78U/44w/D1v/Lv6vby3MMZ+BfhvZuDfPeG/XcN/f4j/hhT/HTD8W+6u3uObs79fg99TAb8vBn5vE/j+NPg9hvD7ROH3+oLv14bfcw+/byJ+70v8/qXwPWjx+wi36wVtm/0K8Pt54/dkh++rjz8bAX++Bf6Mkto5MzbuDz+AnxWEP+8Jf2YX/tw1+Nl5+PMP8WdY4s8hxZ8lCz8PGH+mM/5cbvzZ6qfEIteHab+CKML9P0+kCah/+ccxQ7Zfwcb6/J0QQgghhBBCCCGEEEIIIYQQQgghRvAbpPRXqMLShD8AAAAASUVORK5CYII="
+          onclick="handleSendButtonClick()"
+        />
+      </form>
+    </div>
+  </body>
+  <script src="./script.js">
+</script>
+</html>
